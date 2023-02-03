@@ -1,0 +1,30 @@
+.offset {
+    margin-left: 16px;
+    background-color: black;
+}
+
+
+.wd-text-field {
+    border-radius: 18px;
+    background: #404040;
+    padding: 20px;
+    width: 80%;
+    height: 10px;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: #B0B0B0;
+   font-size: 25px;
+   padding-left: 10px;
+}
+
+.wd-settings-icon {
+    padding-left: 8vw;
+    padding-top: 15px;
+
+
+}
+
+.float-left {
+   float: left;
+}

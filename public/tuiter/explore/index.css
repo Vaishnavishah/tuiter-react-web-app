@@ -1,5 +1,5 @@
 .wd-offset {
-    margin-left:150px;
+    margin-left:16px;
 
 }
 
@@ -14,14 +14,14 @@
     border-radius: 18px;
     background: #404040;
     padding: 20px;
-    width: 70%;
-    height: 10px;
+    width: 65%;
+    height: 3px;
     margin-top:10px;
 }
 
 ::placeholder { /* Most modern browsers support this now. */
    color: #B0B0B0;
-   font-size: 25px;
+   font-size: 20px;
    padding-left: 10px;
 }
 
@@ -109,5 +109,10 @@ border: 1px solid #202327;
 }
 
 
-
+.container {
+  border-left: 1px solid #202327;
+  border-right: 1px solid #202327;
+  width: min(90%, 700px);
+  margin-inline: auto;
+}
 

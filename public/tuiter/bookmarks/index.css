@@ -1,0 +1,64 @@
+.wd-offset {
+    margin-left:150px;
+
+}
+
+.wd-bookmark {
+    margin-left: 16px;
+    background-color: black;
+    font-family: "Public Sans" ,sans-serif;
+}
+
+.wd-border {
+border: 1px solid #202327;
+}
+
+.wd-heading{
+margin-top: 12px;
+margin-left: 16px;
+color: white;
+font-size: 20px;
+margin-bottom: -15px;
+}
+
+.wd-heading-username {
+color: #B0B0B0;
+margin-left: 16px;
+font-size: 13px;
+}
+
+.wd-avatar {
+margin-left: 16px;
+margin-top: 5px;
+border-radius:48px;
+height: 50px;
+width: 50px;
+}
+
+.container {
+  border-left: 1px solid #202327;
+  border-right: 1px solid #202327;
+  width: min(90%, 700px);
+  margin-inline: auto;
+}
+.wd-bookmark-actions {
+  grid-area: actions;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wd-bookmark-action {
+  color: #B0B0B0 ;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.wd-bookmark-action--active {
+  color: crimson;
+}
+
+.wd-bookmark-action > * + * {
+  margin-left: 12px;
+}

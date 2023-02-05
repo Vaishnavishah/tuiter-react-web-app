@@ -1,6 +1,12 @@
-.offset {
+.wd-offset {
+    margin-left:150px;
+
+}
+
+.wd-explore {
     margin-left: 16px;
     background-color: black;
+    font-family: "Public Sans" ,sans-serif;
 }
 
 
@@ -8,8 +14,9 @@
     border-radius: 18px;
     background: #404040;
     padding: 20px;
-    width: 80%;
+    width: 70%;
     height: 10px;
+    margin-top:10px;
 }
 
 ::placeholder { /* Most modern browsers support this now. */
@@ -28,3 +35,79 @@
 .float-left {
    float: left;
 }
+
+.wd-navbar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-inline: auto;
+  margin-bottom: 0;
+}
+
+.wd-navbar-item {
+  color: #B0B0B0;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.wd-active-item {
+  color: blue;
+  border-bottom: 3px solid blue;
+}
+
+.wd-for-you-title {
+    color: #B0B0B0;
+}
+
+.wd-for-you-title-prime {
+    color: white;
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+
+}
+
+.wd-post-title-prime {
+    color: white;
+    font-size: 20px;
+    margin-top: 0px;
+
+}
+
+.wd-logo {
+    float:left;
+    height: 30px;
+    width: 30px;
+}
+
+.wd-thumbnail {
+    height: 100px;
+    width: 100px;
+    margin-right:150px;
+    border-radius: 15px;
+}
+
+.wd-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wd-lines {
+  padding: 16px;
+  border: 1px solid #202327;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wd-border {
+border: 1px solid #202327;
+}
+
+
+
+

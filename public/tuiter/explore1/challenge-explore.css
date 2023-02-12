@@ -1,0 +1,106 @@
+.search-parent {
+  position: relative;
+}
+
+.wd-profile-img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+.list-group-item.override-group-item {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+     border: none;
+     padding-bottom:12px;
+}
+
+/*
+.nav-link.override-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}*/
+
+.list-group-item.override-list {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: none;
+}
+
+.list-group-item.override-list-color {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #F5F5F5;
+    border: none;
+}
+
+.list-group-item.override-list-color-blue {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgb(29, 155, 240);
+    text-decoration: none;
+    background-color: #F5F5F5;
+    border: none;
+}
+
+.list-group.override-list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.list-group.override-radius {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 20px;
+}
+
+.form-control.override-color {
+    border: 1px solid #f8f9fa;
+}
+
+.rounded-pill.override-pill {
+     background-color: #F5F5F5;
+}
+
+.btn-primary.override-btn-color {
+    background-color: #212529;
+    border-color: #212529;
+}
+
+.nav-link.override-link {
+    color: 	#696969;
+}
+
+.active.override-active {
+    color:black;
+    font-weight: bold;
+}
+
+.nav-item a.active {
+  border-bottom: 3px solid rgb(29, 155, 240);
+}
+
+.wd-copyright {
+    font-size: 13px;
+    color: #696969;
+}

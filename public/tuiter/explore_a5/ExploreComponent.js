@@ -34,12 +34,15 @@ const ExploreComponent = () => {
     return(`
             <div class="row d-flex align-items-center">
                             <div class="col-11 search-parent">
+                                <i class="fas fa-search search-icon"></i>
                                 <input
                                         aria-label="search"
                                         class="form-control override-color rounded-pill override-pill search-bar"
                                         placeholder="Search Tuiter"
+                                        style = "padding-left: 7%"
                                         type="search"
                                 />
+
                             </div>
                             <div class="col-1">
                                 <a href="explore-settings.html"><i class="fa fa-cog fs-4"></i></a>

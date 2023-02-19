@@ -1,55 +1,47 @@
 const navItems = [
   {
-    link: "#",
+    link: "../HomeScreen/index.html",
     title: "Home",
     icon: "fa fa-home",
-    active: false,
   },
   {
-    link: "#",
+    link: "../explore_a5/index.html",
     title: "Explore",
     icon: "fa fa-hashtag",
-    active: true,
   },
   {
     link: "#",
     title: "Notifications",
     icon: "fa fa-bell",
-    active: false,
   },
   {
     link: "#",
     title: "Messages",
     icon: "fa fa-envelope",
-    active: false,
   },
   {
     link: "#",
     title: "Bookmarks",
     icon: "fa fa-bookmark",
-    active: false,
   },
   {
       link: "#",
       title: "Lists",
       icon: "fa fa-list",
-      active: false,
     },
     {
         link: "#",
         title: "Profiles",
         icon: "fa fa-user",
-        active: false,
      },
      {
          link: "#",
          title: "More",
          icon: "fa fa-circle",
-         active: false,
       },
 ];
 
-const NavigationSidebar = () => {
+const NavigationSidebar = (activeTitle) => {
  return(`
    <div class="list-group">
      <a class="list-group-item" href="/">
@@ -61,7 +53,7 @@ const NavigationSidebar = () => {
 
                                ${navItems.map(
                                           (item) => `<a href=${item.link}  class = ${`"list-group-item ${
-                                          item.active ? `active` : ``
+                                          item.title == activeTitle ? `active` : ``
                                           }"`}>
                                           <i class = "${item.icon}"></i>
                                           ${item.title}

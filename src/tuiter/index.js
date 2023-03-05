@@ -4,6 +4,7 @@ import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
 import {Routes, Route} from "react-router";
 import HomeComponent from "./home_a6";
+import PostSummaryList from "./post-summary-list"
 
 
 function Tuiter() {
@@ -15,13 +16,19 @@ function Tuiter() {
      <div className="col-10 col-md-10 col-lg-7 col-xl-6"
           style={{"position": "relative"}}>
        <Routes>
+                <Route path="/" element={<ExploreComponent/>}/>
                 <Route path="home"    element={<HomeComponent/>}/>
                 <Route path="explore" element={<ExploreComponent/>}/>
        </Routes>
 
      </div>
      <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-       <WhoToFollowList/>
+        <Routes>
+                        <Route path="/" element={<WhoToFollowList/>}/>
+                        <Route path="home"    element={<PostSummaryList/>}/>
+                        <Route path="explore" element={<WhoToFollowList/>}/>
+               </Routes>
+
      </div>
    </div>
  );

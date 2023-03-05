@@ -6,7 +6,9 @@ import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/
 
 const NavigationSidebar = () => {
  const {pathname} = useLocation();
+
  const paths = pathname.split('/')
+
  const active = paths[2];
 
  return (
@@ -19,7 +21,7 @@ const NavigationSidebar = () => {
          &nbsp; Home
      </Link>
      <Link to="/tuiter/explore" className={`list-group-item
-                    ${active === 'explore'?'active':''}`}>
+                    ${active === 'explore' ?'active': pathname === '/tuiter' ? 'active' : ''}`}>
      <FontAwesomeIcon icon={solid('hashtag')}  />
        &nbsp; Explore
      </Link>

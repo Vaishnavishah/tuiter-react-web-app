@@ -29,6 +29,11 @@ const NavigationSidebar = () => {
      <FontAwesomeIcon icon={solid('computer')}  />
            &nbsp; Labs
      </Link>
+     <Link to="/tuiter/profile" className={`list-group-item
+                         ${active === 'profile'?'active':''}`}>
+          <FontAwesomeIcon icon={solid('user')}  />
+              &nbsp; Profile
+          </Link>
 
      <a className={`list-group-item
                     ${active === 'notifications'?'active':''}`}>
@@ -54,12 +59,7 @@ const NavigationSidebar = () => {
                                &nbsp;
        Lists
      </a>
-     <a className={`list-group-item
-                    ${active === 'profile'?'active':''}`}>
-                    <FontAwesomeIcon icon={solid('user')}  />
-                               &nbsp;
-       Profile
-     </a>
+
      <a className={`list-group-item
                     ${active === 'more'?'active':''}`}>
                     <FontAwesomeIcon icon={solid('circle')}  />

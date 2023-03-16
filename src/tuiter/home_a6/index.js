@@ -1,11 +1,17 @@
 import React from "react";
-import posts from './posts.json';
+import {useSelector} from "react-redux";
 import PostItem
   from "./post-item";
+import WhatsHappening from "./whats-happening";
+
 
 const HomeComponent = () => {
+const posts = useSelector(state => state.tuits)
 
    return(
+   <>
+   <WhatsHappening/>
+
       <ul className="list-group">
         {
           posts.map(post =>
@@ -16,6 +22,7 @@ const HomeComponent = () => {
           )
         }
       </ul>
+      </>
     );
 
 };

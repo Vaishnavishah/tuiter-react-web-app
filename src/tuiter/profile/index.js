@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+import EditProfileComponent from "./edit-profile";
 import {useSelector} from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,13 +7,18 @@ import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/
 import "./index.css";
 
 
-
 const ProfileComponent = () => {
-const profileList = useSelector(state => state.profile)
-const profile = profileList[0];
+const profile = useSelector(state => state.profile)
+
 const navigate = useNavigate();
+
+const [isEditing, setEditing] = useState(false);
+
    return(
    <>
+   {isEditing ? <EditProfileComponent editComplete={() => setEditing(false)}/>
+   :
+
    <ul className="list-group">
     <li className="list-group-item">
     <div className="row">
@@ -37,9 +43,9 @@ const navigate = useNavigate();
               <img class="circleImg" src={`/images/${profile.profilePicture}`} alt="img"/>
 
               <div>
-                <a href="#" role="link" class="capsule">
+                <button onClick={() => setEditing(true)} class="capsule">
                   Edit profile
-                </a>
+                </button>
               </div>
           </div>
     </div>
@@ -51,7 +57,7 @@ const navigate = useNavigate();
 
     </div>
     <div className = "mt-2 ">
-        Faculty, Software Engineer, Al, Space, and renewable enthusiast. Retweets and likes are not endorsements.
+        {profile.bio}
     </div>
     <div className="row pb-3 ps-2 text-muted">
          <div className="col">
@@ -77,6 +83,7 @@ const navigate = useNavigate();
     </div>
     </li>
     </ul>
+    }
     </>
 
     );

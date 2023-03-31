@@ -9,6 +9,9 @@ import {useState} from "react";
 import {like, deleteTuit}
   from "../tuits/home-tuit-reducer";
 
+import {deleteTuitThunk, updateTuitThunk} from "../../services/tuits-thunks";
+
+
 const PostSummaryItem = (
  {
    post = {
@@ -29,12 +32,27 @@ const PostSummaryItem = (
  }
 ) => {
 const dispatch = useDispatch();
+
 const liketuit = (tuit) => {
-    dispatch(like(tuit))
-  }
+    dispatch(updateTuitThunk({
+           ...tuit,
+           likes: tuit.likes + 1,
+           liked: true
+         }))
+    }
+
+const disliketuit = (tuit) => {
+    dispatch(updateTuitThunk({
+           ...tuit,
+           dislikes: tuit.dislikes + 1,
+           disliked: true
+         }))
+    }
+
 
 const deleteTuitHandler = (id) => {
-dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
+
 }
 
  return(
@@ -56,7 +74,7 @@ dispatch(deleteTuit(id));
                                  {post.userName}
                                  <FontAwesomeIcon icon={solid('circle-check')}  />
                              </span>
-                             <span className="text-muted"> @{post.handle} &middot; {post.time} </span>
+                             <span className="text-muted"> {post.handle} &middot; {post.time} </span>
                              <span className="float-end"> <FontAwesomeIcon icon={solid('xmark')} onClick={() => deleteTuitHandler(post._id)} /> </span>
                          </div>
                          <div className="pt-1">
@@ -78,6 +96,12 @@ dispatch(deleteTuit(id));
                                    {post.liked && <FontAwesomeIcon icon={solid('heart')} style={{color: 'red'}} onClick={() => liketuit(post)}/>}
                                    {!post.liked && <FontAwesomeIcon icon={solid('heart')} onClick={() => liketuit(post)}/>}
                                    <span className="text-muted ps-2">{post.likes}</span>
+                             </div>
+                             <div className="col">
+
+                                    {post.disliked && <FontAwesomeIcon icon={solid('thumbs-down')} onClick={() => disliketuit(post)}/>}
+                                    {!post.disliked && <FontAwesomeIcon icon={regular('thumbs-down')} onClick={() => disliketuit(post)}/>}
+                                    <span className="text-muted ps-2">{post.dislikes}</span>
                              </div>
                              <div className="col">
                                     <FontAwesomeIcon icon={solid('arrow-up-from-bracket')}  />
